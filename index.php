@@ -20,7 +20,7 @@ session_start();
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Tarmica's CUT Kitchen</title>
+	<title>Mbaita & Tarmica's CUT Kitchen</title>
 	<!-- font awesome -->
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
   	<!-- Bootstrap -->
@@ -35,7 +35,7 @@ session_start();
 			box-sizing: border-box;
 		}	
 		.main{
-			background-image: url('images/img/home.jpg');
+			background-image: url('images/RGFYE8609.jpg');
 			background-repeat: no-repeat;    
 			background-size: cover;
 			/*position: relative;*/
@@ -185,16 +185,16 @@ session_start();
 					?><a href="ulogin/account.php" ><i class="fa fa-user" aria-hidden="true">&nbsp;</i><?php echo $data['name'] ?></a><?php
 				}
 				else{
-					?><a href="login.php" >Login/Sign up</a><?php
+					?><a href="login.php" >Login/Sign up(Batika iwe bharanz)</a><?php
 				}
 			?>
 		</div>
 		
 		<div class="site-title">
-			<h1>Tarmica's Kitchen</h1>
+			<h1>Mbaita & Tarmica's Kitchen</h1>
 		</div>
 		<div class="site-yellow-img">
-			<img src="images/img/yellow-str.png" class="img-fluid">
+			<img src="images/orderprocess.png" class="img-fluid">
 		</div>
 		<div class="site-menu">
 			<?php
