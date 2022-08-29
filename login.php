@@ -83,6 +83,9 @@
 	</style>
 </head>
 <body>
+	<div style="float: left;" class="mt-3 ml-3">
+		<a href="index.php"><button class="btn btn-primary">BACK</button></a>
+	</div>
 	<div style="float: right;" class="mt-3 mr-3">
 		<a href="admin/adminlogin.php"><button class="btn btn-primary">ADMIN</button></a>
 	</div>
