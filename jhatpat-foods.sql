@@ -62,14 +62,14 @@ CREATE TABLE `menu` (
 --
 
 INSERT INTO `menu` (`id`, `item_no`, `name`, `type`, `detail`, `price`, `image`) VALUES
-(3, 2, 'Rice', 'Non Veg', 'Plain Rice. The way Karen likes it ', '0.5', 'samosa.jpg'),
-(5, 3, 'Sadza', 'Non Veg', 'Because the uni canteen set a bar so low, I guarantee you this sadza is better than the type served at the canteen', '0.5', 'jalebi.jpg'),
-(6, 4, 'French Fries', 'Non Veg', 'Naan is a leavened, oven-baked flatbread.', '12', 'naan.jpg'),
-(7, 5, 'Pork', 'Veg', 'Scrambled Indian cottage cheese with onion, tomatoes and spices.', '50', 'paneer-bhurji.jpg'),
-(8, 6, 'Beef', 'Veg', 'Vegetable Pulao (Veg Pulav) is a spicy rice dish prepared by cooking rice with various vegetables and spices.', '60', 'pulav.jpg'),
-(9, 7, 'Biryani', 'Non Veg', 'Chicken Biryani is a delicious savory rice dish loaded with spicy marinated chicken, caramelized onions, and flavorful saffron rice.', '100', 'biryani.jpg'),
-(10, 8, 'Fish', 'Non Veg', 'Fish fry is a meal containing battered or breaded fried fish.', '100', 'fish.jpg'),
-(11, 9, 'Butter Chicken', 'Non Veg', 'Butter chicken or makhan murg is a dish, originating in the Indian subcontinent, of chicken in a mildly spiced tomato sauce.', '99', 'Butter-Chicken.jpg');
+(3, 2, 'Rice', 'Non Veg', 'Plain Rice. The way Karen likes it ', '0.5', 'rice.jpg'),
+(5, 3, 'Sadza', 'Non Veg', 'Because the uni canteen set a bar so low, I guarantee you this sadza is better than the type served at the canteen', '0.5', 'sadza2.jpg'),
+(6, 4, 'French Fries', 'Non Veg', 'Naan is a leavened, oven-baked flatbread.', '1', 'fries.jpg'),
+(7, 5, 'Pork', 'Non Veg','Boiled or Fried.', '1', 'paneer-bhurji.jpg'),
+(8, 6, 'Beef', 'Non Veg', 'Father bought a cow, mom bought a chicken. (sorry, Tarmica sucks at captions)', '1', 'pulav.jpg'),
+(9, 7, 'Biryani', 'Non Veg', 'Chicken Biryani is a delicious savory rice dish loaded with spicy marinated chicken, caramelized onions, and flavorful saffron rice.', '10', 'biryani.jpg'),
+(10, 8, 'Fish', 'Non Veg', 'Fish fry is a meal containing battered or breaded fried fish.', '1', 'fish.jpg'),
+(11, 9, 'Butter Chicken', 'Non Veg', 'Butter chicken or makhan murg is a dish, originating in the Indian subcontinent, of chicken in a mildly spiced tomato sauce.', '3', 'Butter-Chicken.jpg');
 
 -- --------------------------------------------------------
 

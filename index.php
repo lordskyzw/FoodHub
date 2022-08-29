@@ -31,6 +31,7 @@ session_start();
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 	<style>
 		body{
+			
 			margin: 0px;
 			padding: 0px;
 			box-sizing: border-box;
@@ -38,13 +39,13 @@ session_start();
 		}	
 		.main{
 			background-image: url('images/IMG_E2690.jpg');
-			background-repeat: no-repeat;    
+			background-repeat: no-repeat; 
 			background-size: cover;
-			/*position: relative;*/
+			position: relative;
 			width: 100vw;
 			height: 100vh;
 		}
-		.logout a{
+		.logout a{idxx
 			float: right;
 			margin: 15px 2px;
 			padding: 5px 10px;
