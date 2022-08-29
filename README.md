@@ -8,11 +8,6 @@ Admin Login & Password (You can change this in phpmyadmin): <br>
 Login: admin <br>
 Password: admin <br>
 
-## Screenshots
-
-<img src="https://github.com/nilesh-kawar/Online-Food-Ordering-System/blob/main/screenshots/home.png"/>
-
-Find how the project looks in screenshots folder Or <a href="https://github.com/nilesh-kawar/Online-Food-Ordering-System/blob/main/screenshots/"> click here </a>
 
 ## Technologies Used
 
