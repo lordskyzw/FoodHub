@@ -28,3 +28,16 @@ else{
 	<link href="https://fonts.googleapis.com/css2?family=Knewave&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 </head>
+
+<body>
+<div class="content-wrapper">
+	<div id="menu" class="site-title">
+		<div class="hub">
+		<span><h1>The</h1></span>
+		<span><h1>menu</h1></span>
+</div>
+</div>
+
+</div>
+
+</body

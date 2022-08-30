@@ -206,9 +206,9 @@ session_start();
 			<?php
 				if (isset($_SESSION['uid'])) 
 				{
-					?><a href="menu/index.php" >MENU</a><?php
+					?><a href="menu.php" >MENU</a><?php
 				}else{
-					?><a href="menu/menu.php" >MENU</a><?php
+					?><a href="menu.php" >MENU</a><?php
 				}
 				?>
 		</div>
