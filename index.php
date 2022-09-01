@@ -36,6 +36,7 @@ session_start();
 			padding: 0px;
 			box-sizing: border-box;
 			color: #ffffff;
+			position: relative;
 		}	
 		.main{
 			background-image: url('images/IMG_E2690.jpg');
@@ -75,6 +76,7 @@ session_start();
 			color: #000!important;
 		}
 		.site-title{
+			display:inline-block;
 			position: absolute;
 			top: 20%;
 			left: 50%;
@@ -189,26 +191,29 @@ session_start();
 					?><a href="ulogin/account.php" ><i class="fa fa-user" aria-hidden="true">&nbsp;</i><?php echo $data['name'] ?></a><?php
 				}
 				else{
-					?><a href="login.php" >Login/Sign up</a><?php
+					?><a href="login.php">Login/Sign up</a><?php
 				}
 			?>
 		</div>
 		
 		<div class="site-title">
-		<div class="hub">
-			<span><h1>Food</h1></span>
-			<span><h1 id="hhub">hub</h1></span>
-			
-		</div>
+		
+
+<div class="hub">
+  <span >Food</span>
+  <span>hub</span>
+</div>
+
+	
 		</div>
 
 		<div class="site-menu">
 			<?php
 				if (isset($_SESSION['uid'])) 
 				{
-					?><a href="menu/index.php" >MENU</a><?php
+					?><a href="menu.php" >MENU</a><?php
 				}else{
-					?><a href="menu/menu.php" >MENU</a><?php
+					?><a href="menu.php" >MENU</a><?php
 				}
 				?>
 		</div>
