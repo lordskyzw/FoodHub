@@ -1,0 +1,43 @@
+body{
+    background-color: black;
+}
+.contentwrapper{
+color: #000;
+display: block;
+position: absolute;
+top: 0%;
+}
+.titlewrapper{
+  color: #000;
+  position: relative;
+  top: 10;
+  padding: 2px;
+  margin: 5px;
+}
+.hub {
+  display: block;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 9vw;
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hub span:nth-child(2) {
+  background: #FF9900;
+  color: #000000;
+  border-radius: 1vw;
+  padding: 0 1vw 1vw 1vw;
+  display: inline-block;
+}
+.menuwrapper{
+
+}
+
+
+
+  #food{
+    color: white;
+  }

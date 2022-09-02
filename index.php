@@ -58,7 +58,7 @@ session_start();
 			background-color: #F44336;
 		}
 		.log-reg a{
-			color: #fff;
+			color: #fff; 
 			float: right;
 			margin: 15px 2px;
 			padding: 5px 10px;
@@ -148,7 +148,7 @@ session_start();
 			left: 0;
 			z-index: 1;
 		}
-
+	
   		@media screen and (max-width: 968px) and (min-width: 579px){
     		.site-title h1{
     		  font-size: 3.0rem;
@@ -197,16 +197,9 @@ session_start();
 		</div>
 		
 		<div class="site-title">
-		
-
-<div class="hub">
-  <span >Food</span>
-  <span>hub</span>
-</div>
-
-	
+		<div class="hub"><span>Food</span><span>hub</span></div>
 		</div>
-
+		
 		<div class="site-menu">
 			<?php
 				if (isset($_SESSION['uid'])) 
