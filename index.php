@@ -76,8 +76,8 @@ session_start();
 			color: #000!important;
 		}
 		.site-title{
-			display:inline-block;
-			position: absolute;
+			display:block;
+			position: relative;
 			top: 20%;
 			left: 50%;
 			-webkit-transform: translate(-50%);
