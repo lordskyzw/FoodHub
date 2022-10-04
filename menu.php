@@ -4,10 +4,10 @@ if (isset($_SESSION['uid']))
 {
     include('dbcon.php');
     $uid = $_SESSION['uid'];
-    $query = "SELECT * FROM `user` WHERE `id` = '$uid'";
+    $query = "SELECT * FROM user WHERE id = '$uid'";
     $run = mysqli_query($conn, $query);
     $data = mysqli_fetch_assoc($run);
-	$id = mysqli
+	  $id = "mysqli";
 }
 else{
 
@@ -49,33 +49,25 @@ else{
 </head>
 
 <body>
-	<script>
-$(document).ready(function() {
+
 
 <?php
 
-	$sql = "SELECT * FROM `menu` WHERE `id` = $id";
-	$retval = mysql_query( $sql, $conn );
-	if(! $retval )
-	{
-	  die('Could not get data: ' . mysql_error());
-	}
-	while($row = mysql_fetch_array($retval, MYSQL_ASSOC))
-	{
-	?>
-		$('<div/>', {
-				'id': 'div _<?php echo $row["id"]; ?>',
-				'class': 'some_class_name',
-				'html': 'i am div with id=div '+ 
-						'<?php echo $row["id"]; ?>'+  
-						' <?php echo $row["name"]; ?>'+
-						'<img src="PATH_TO_IMAGE/<?php echo $row["image_name"]; ?>" /> '
-					  
-			}).appendTo('.body1');
+  $sql = "SELECT * FROM `menu`";
+  $retval = mysqli_query($conn, $sql);
+  if(! $retval )
+  {
+    die('Could not get data: ' . mysqli_error($conn));
+  }
+  while($row = mysqli_fetch_array($retval, MYSQLI_ASSOC))
+  {
+    echo '<div style="display: inline-block; margin: 5px">'.
+    '<h6>'.$row["id"] .'</h6>'.
+    '<h5>'.$row["name"] .'</h5>'.
+    '<img src="dataimg/'.$row["image"].'" style="width: 300px;"/>'.
+    '</div>';
+  } 
+?>
 
-<?php   } ?>
-
-});
-</script>
 </body>
 </html>
