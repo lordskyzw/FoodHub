@@ -46,7 +46,7 @@ session_start();
 			width: 100vw;
 			height: 100vh;
 		}
-		.logout a{idxx
+		.logout a{
 			float: right;
 			margin: 15px 2px;
 			padding: 5px 10px;
