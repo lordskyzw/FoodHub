@@ -109,7 +109,7 @@ if(isset($_GET['delete_all'])){
 </div>
    
 <!-- custom js file link  -->
-<script src="cartscript.js"></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
