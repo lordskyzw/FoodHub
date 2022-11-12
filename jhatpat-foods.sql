@@ -191,6 +191,16 @@ INSERT INTO `user` (`id`, `name`, `mobile`, `location`, `email`, `password`, `cp
 -- Indexes for dumped tables
 --
 
+CREATE TABLE `cart`(
+    `id` INT(11) NOT NULL AUTO_INCREMENT,
+    `user_id` INT(11) NOT NULL,
+    `item_id` INT(11) NOT NULL,
+    `total_item` INT(11) NOT NULL,
+    PRIMARY KEY (`id`),
+    FOREIGN KEY (`user_id`) REFERENCES `user`(`id`),
+    FOREIGN KEY (`item_id`) REFERENCES `item`(`id`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- Indexes for table `admin`
 --
