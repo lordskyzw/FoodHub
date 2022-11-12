@@ -36,7 +36,7 @@ if(isset($_GET['delete_all'])){
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
    <!-- custom css file link  -->
-   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="cartstyle.css">
 
 </head>
 <body>
@@ -109,7 +109,7 @@ if(isset($_GET['delete_all'])){
 </div>
    
 <!-- custom js file link  -->
-<script src="js/script.js"></script>
+<script src="cartscript.js"></script>
 
 </body>
 </html>
