@@ -66,7 +66,7 @@
 			<img src="images/logo.png" class="img-fluid">
 		</div>
 		<div class="inner-menu sticky-top">
-			<a href="../index.php" style="float: left;">HOME</a>
+			<a href="index.php" style="float: left;">HOME</a>
 			<a href="cart.php" style="float: right;">CART 
 			<?php
 			if (isset($_SESSION['cart'])) 

@@ -65,8 +65,8 @@
 	
 	<div class="bg-dark pt-3 pb-3">
 		<a href="../index.php"><button type="button" class="btn btn-success ml-3" style="float:left;">HOME</button></a>
-		<a href="../menu/cart.php"><button type="button" class="btn btn-danger mr-3" style="float:right;">CART</button></a>
-		<h1 class="text-center text-light">TARMICA'S KITCHEN</h1>
+		<a href="../cart.php"><button type="button" class="btn btn-danger mr-3" style="float:right;">CART</button></a>
+		<h1 class="text-center text-light">FoodHub</h1>
 	</div>
 
 	<div class="text-center pt-5">

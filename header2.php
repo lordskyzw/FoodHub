@@ -2,11 +2,11 @@
 
    <div class="flex">
 
-      <a href="#" class="logo">foodies</a>
+      <a href="#" class="logo">FoodHub</a>
 
       <nav class="navbar">
-         <a href="admin.php">add products</a>
-         <a href="products.php">view products</a>
+        
+         
       </nav>
 
       <?php

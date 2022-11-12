@@ -48,13 +48,13 @@ if(isset($message)){
 
 ?>
 
-<?php include 'header.php'; ?>
+<?php include 'header2.php'; ?>
 
 <div class="container">
 
 <section class="products">
 
-   <h1 class="heading">latest products</h1>
+   <h1 class="heading">Menu</h1>
 
    <div class="box-container">
 
@@ -67,9 +67,9 @@ if(isset($message)){
 
       <form action="" method="post">
          <div class="box">
-            <img src="uploaded_img/<?php echo $fetch_product['image']; ?>" alt="">
+            <img src="images/<?php echo $fetch_product['image']; ?>" alt="">
             <h3><?php echo $fetch_product['name']; ?></h3>
-            <div class="price">$<?php echo $fetch_product['price']; ?>/-</div>
+            <div class="price">$<?php echo $fetch_product['price']; ?> per gram</div>
             <input type="hidden" name="product_name" value="<?php echo $fetch_product['name']; ?>">
             <input type="hidden" name="product_price" value="<?php echo $fetch_product['price']; ?>">
             <input type="hidden" name="product_image" value="<?php echo $fetch_product['image']; ?>">
