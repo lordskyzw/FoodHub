@@ -26,7 +26,7 @@ if(isset($_POST['order_btn'])){
    };
 
    $total_product = implode(', ',$product_name);
-   $detail_query = mysqli_query($conn, "INSERT INTO `order`(name, number, email, method, flat, street, city, state, country, pin_code, total_products, total_price) VALUES('$name','$number','$email','$method','$flat','$street','$city','$state','$country','$pin_code','$total_product','$price_total')") or die('query failed');
+   $detail_query = mysqli_query($conn, "INSERT INTO `order`(email, method, flat, total_products, total_price) VALUES('$email','$method','$flat','$total_product','$price_total')") or die('query failed');
 
    if($cart_query && $detail_query){
       echo "
@@ -38,10 +38,6 @@ if(isset($_POST['order_btn'])){
             <span class='total'> total : $".$price_total."/-  </span>
          </div>
          <div class='customer-details'>
-            <p> your name : <span>".$name."</span> </p>
-            <p> your number : <span>".$number."</span> </p>
-            <p> your email : <span>".$email."</span> </p>
-            <p> your address : <span>".$flat.", ".$street.", ".$city.", ".$state.", ".$country." - ".$pin_code."</span> </p>
             <p> your payment mode : <span>".$method."</span> </p>
             <p>(*pay when product arrives*)</p>
          </div>
@@ -104,14 +100,6 @@ if(isset($_POST['order_btn'])){
 
       <div class="flex">
          <div class="inputBox">
-            <span>your name</span>
-            <input type="text" placeholder="enter your name" name="name" required>
-         </div>
-         <div class="inputBox">
-            <span>your number</span>
-            <input type="number" placeholder="enter your number" name="number" required>
-         </div>
-         <div class="inputBox">
             <span>your email</span>
             <input type="email" placeholder="enter your email" name="email" required>
          </div>
@@ -119,33 +107,13 @@ if(isset($_POST['order_btn'])){
             <span>payment method</span>
             <select name="method">
                <option value="cash on delivery" selected>cash on devlivery</option>
-               <option value="credit cart">credit cart</option>
-               <option value="paypal">paypal</option>
+               <!--<option value="credit cart">credit cart</option>-->
+               <!--<option value="paypal">paypal</option>-->
             </select>
          </div>
          <div class="inputBox">
-            <span>address line 1</span>
-            <input type="text" placeholder="e.g. flat no." name="flat" required>
-         </div>
-         <div class="inputBox">
-            <span>address line 2</span>
-            <input type="text" placeholder="e.g. street name" name="street" required>
-         </div>
-         <div class="inputBox">
-            <span>city</span>
-            <input type="text" placeholder="e.g. mumbai" name="city" required>
-         </div>
-         <div class="inputBox">
-            <span>state</span>
-            <input type="text" placeholder="e.g. maharashtra" name="state" required>
-         </div>
-         <div class="inputBox">
-            <span>country</span>
-            <input type="text" placeholder="e.g. india" name="country" required>
-         </div>
-         <div class="inputBox">
-            <span>pin code</span>
-            <input type="text" placeholder="e.g. 123456" name="pin_code" required>
+            <span>Drop Location</span>
+            <input type="text" placeholder="meetup spot" name="flat" required>
          </div>
       </div>
       <input type="submit" value="order now" name="order_btn" class="btn">
