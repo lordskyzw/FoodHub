@@ -4,16 +4,12 @@
 
 if(isset($_POST['order_btn'])){
 
-   $name = $_POST['name'];
-   $number = $_POST['number'];
+   
+
    $email = $_POST['email'];
    $method = $_POST['method'];
    $flat = $_POST['flat'];
-   $street = $_POST['street'];
-   $city = $_POST['city'];
-   $state = $_POST['state'];
-   $country = $_POST['country'];
-   $pin_code = $_POST['pin_code'];
+  
 
    $cart_query = mysqli_query($conn, "SELECT * FROM `cart`");
    $price_total = 0;
