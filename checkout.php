@@ -8,7 +8,7 @@ if(isset($_POST['order_btn'])){
 
    $email = $_POST['email'];
    $method = $_POST['method'];
-   $flat = $_POST['flat'];
+   $location = $_POST['location'];
   
 
    $cart_query = mysqli_query($conn, "SELECT * FROM `cart`");
@@ -22,7 +22,7 @@ if(isset($_POST['order_btn'])){
    };
 
    $total_product = implode(', ',$product_name);
-   $detail_query = mysqli_query($conn, "INSERT INTO `order`(email, method, flat, total_products, total_price) VALUES('$email','$method','$flat','$total_product','$price_total')") or die('query failed');
+   $detail_query = mysqli_query($conn, "INSERT INTO `order`(email, method, location, total_products, total_price) VALUES('$email','$method','$location','$total_product','$price_total')") or die('query failed');
 
    if($cart_query && $detail_query){
       echo "
@@ -109,7 +109,7 @@ if(isset($_POST['order_btn'])){
          </div>
          <div class="inputBox">
             <span>Drop Location</span>
-            <input type="text" placeholder="meetup spot" name="flat" required>
+            <input type="text" placeholder="meetup spot" name="location" required>
          </div>
       </div>
       <input type="submit" value="order now" name="order_btn" class="btn">
