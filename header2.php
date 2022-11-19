@@ -1,3 +1,14 @@
+<style>
+
+.header{
+   background-color: #000;
+}
+
+
+</style>
+
+
+
 <header class="header">
 
    <div class="flex">

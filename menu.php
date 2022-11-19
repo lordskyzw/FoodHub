@@ -42,7 +42,7 @@ else{
   <link href="css/font-awesome.min.css" rel="stylesheet" />
 
   <!-- Custom styles for this template -->
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/menu.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
 
@@ -50,7 +50,9 @@ else{
 
 <body>
 
+<?php include 'header.php'; ?>
 
+<div class="contentwrapper">
 <?php
 
   $sql = "SELECT * FROM `menu`";
@@ -64,10 +66,10 @@ else{
     echo '<div style="display: inline-block; margin: 5px">'.
     '<h6>'.$row["id"] .'</h6>'.
     '<h5>'.$row["name"] .'</h5>'.
-    '<img src="dataimg/'.$row["image"].'" style="width: 300px;"/>'.
+    '<img src="images/'.$row["image"].'" style="width: 300px;"/>'.
     '</div>';
   } 
 ?>
-
+</div>
 </body>
 </html>

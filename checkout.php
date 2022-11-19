@@ -59,6 +59,7 @@ if(isset($_POST['order_btn'])){
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
    <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/responsive.css">
    <link rel="stylesheet" href="css/style.css">
 
 </head>
