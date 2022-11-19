@@ -39,18 +39,17 @@ if(isset($_GET['delete_all'])){
    <link rel="stylesheet" href="css/cart.css">
    <link rel="stylesheet" href="css/responsive.css">
    <link rel="stylesheet" href="cartstyle.css">
-   <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
 
-<?php include 'header.php'; ?>
+<?php include 'cartheader.php'; ?>
 
 <div class="container">
 
 <section class="shopping-cart">
 
-   <h1 class="heading">shopping cart</h1>
+   <h1 class="heading" style="text-align:center;">shopping cart <i class="fa fa-shopping-cart" aria-hidden="true"></i></h1>
 
    <table>
 

@@ -13,7 +13,8 @@
 
    <div class="flex">
 
-      <a href="index.php" class="logo">FoodHub</a>
+      <a href="#" class="logo">FoodHub</a>
+      
 
       <nav class="navbar">
         
@@ -27,9 +28,8 @@
 
       ?>
 
-      <a href="cart.php" class="cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> cart <span><?php echo $row_count; ?></span> </a>
 
-      <!--<div id="menu-btn" class="fas fa-bars"></div>-->
+      <a href="products.php" style="color: #fff; top: 25%; text-align: bottom;"><i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i></a>
 
    </div>
 

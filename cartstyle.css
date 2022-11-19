@@ -50,7 +50,7 @@ section{
    display: block;
    width: 100%;
    text-align: center;
-   background-color: var(--blue);
+   background-color: #000;
    color:var(--white);
    font-size: 1.7rem;
    padding:1.2rem 3rem;
@@ -62,7 +62,7 @@ section{
 .btn:hover,
 .option-btn:hover,
 .delete-btn:hover{
-   background-color: var(--black);
+   background-color: var(--orange);
 }
 
 .option-btn i,
