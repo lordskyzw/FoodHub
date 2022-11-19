@@ -19,7 +19,7 @@
 		body{
 			margin: 0;
 			padding: 0;
-			background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/pizza.jpg');
+			background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/IMG_E2690.jpg');
 			background-repeat: no-repeat;    
 			background-size: cover;
 			box-sizing: border-box;

@@ -6,7 +6,7 @@ if(isset($_POST['order_btn'])){
 
    
 
-   $email = $_POST['email'];
+   $number = $_POST['number'];
    $method = $_POST['method'];
    $location = $_POST['location'];
   
@@ -22,7 +22,7 @@ if(isset($_POST['order_btn'])){
    };
 
    $total_product = implode(', ',$product_name);
-   $detail_query = mysqli_query($conn, "INSERT INTO `order`(email, method, location, total_products, total_price) VALUES('$email','$method','$location','$total_product','$price_total')") or die('query failed');
+   $detail_query = mysqli_query($conn, "INSERT INTO `order`(phonenumber, method, location, qty, total) VALUES('$number','$method','$location','$total_product','$price_total')") or die('query failed');
 
    if($cart_query && $detail_query){
       echo "
@@ -70,34 +70,34 @@ if(isset($_POST['order_btn'])){
 
 <section class="checkout-form">
 
-   <h1 class="heading">complete your order</h1>
+   <h1 style="font-family: syst;">complete your order</h1>
 
    <form action="" method="post">
 
-   <div class="display-order">
-      <?php
-         $select_cart = mysqli_query($conn, "SELECT * FROM `cart`");
-         $total = 0;
-         $grand_total = 0;
-         if(mysqli_num_rows($select_cart) > 0){
-            while($fetch_cart = mysqli_fetch_assoc($select_cart)){
-            $total_price = number_format($fetch_cart['price'] * $fetch_cart['quantity']);
-            $grand_total = $total += $total_price;
-      ?>
-      <span><?= $fetch_cart['name']; ?>(<?= $fetch_cart['quantity']; ?>)</span>
-      <?php
+      <div class="display-order">
+         <?php
+            $select_cart = mysqli_query($conn, "SELECT * FROM `cart`");
+            $total = 0;
+            $grand_total = 0;
+            if(mysqli_num_rows($select_cart) > 0){
+               while($fetch_cart = mysqli_fetch_assoc($select_cart)){
+               $total_price = number_format($fetch_cart['price'] * $fetch_cart['quantity']);
+               $grand_total = $total += $total_price;
+         ?>
+         <span><?= $fetch_cart['name']; ?>(<?= $fetch_cart['quantity']; ?>)</span>
+         <?php
+            }
+         }else{
+            echo "<div class='display-order'><span>your cart is empty!</span></div>";
          }
-      }else{
-         echo "<div class='display-order'><span>your cart is empty!</span></div>";
-      }
-      ?>
-      <span class="grand-total"> grand total : $<?= $grand_total; ?>/- </span>
-   </div>
+         ?>
+         <span class="grand-total"> grand total : $<?= $grand_total; ?> </span>
+      </div>
 
       <div class="flex">
          <div class="inputBox">
-            <span>your email</span>
-            <input type="email" placeholder="enter your email" name="email" required>
+            <span>your burner</span>
+            <input type="text" placeholder="enter phone number" name="phone" required>
          </div>
          <div class="inputBox">
             <span>payment method</span>
