@@ -19,7 +19,7 @@
 
 	<div class=" bg-dark pt-3 pb-3">
 		<a href="../index.php"><button type="button" class="btn btn-success ml-3" style="float:right;">HOME</button></a>
-		<a href="../login.php"><button type="button" class="btn btn-danger mr-3" style="float:left;"><< Back</button></a>
+		<a href="../login.php"><button type="button" class="btn btn-danger mr-3" style="float:left;">BACK</button></a>
 		<h1 class="text-center text-light">FOODHUB</h1>
 	</div>
 	<div class="mt-5 bg-info container text-center text-white">

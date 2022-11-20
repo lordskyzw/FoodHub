@@ -71,7 +71,7 @@ if(isset($_POST['order_btn'])){
 
 <section class="checkout-form">
 
-   <h1 style="font-family: syst;">complete your order</h1>
+   <h1 style="font-family: system;">complete your order</h1>
 
    <form action="" method="post">
 
