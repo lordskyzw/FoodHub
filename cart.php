@@ -1,27 +1,29 @@
 <?php
 
-@include 'dbcon.php';
+session_start();
+   if (isset($_SESSION['uid'])){
+         @include 'dbcon.php';
 
-if(isset($_POST['update_update_btn'])){
-   $update_value = $_POST['update_quantity'];
-   $update_id = $_POST['update_quantity_id'];
-   $update_quantity_query = mysqli_query($conn, "UPDATE `cart` SET quantity = '$update_value' WHERE id = '$update_id'");
-   if($update_quantity_query){
-      header('location:cart.php');
-   };
-};
+      if(isset($_POST['update_update_btn'])){
+         $update_value = $_POST['update_quantity'];
+         $update_id = $_POST['update_quantity_id'];
+         $update_quantity_query = mysqli_query($conn, "UPDATE `cart` SET quantity = '$update_value' WHERE id = '$update_id'");
+         if($update_quantity_query){
+            header('location:cart.php');
+         };
+      };
 
-if(isset($_GET['remove'])){
-   $remove_id = $_GET['remove'];
-   mysqli_query($conn, "DELETE FROM `cart` WHERE id = '$remove_id'");
-   header('location:cart.php');
-};
+      if(isset($_GET['remove'])){
+         $remove_id = $_GET['remove'];
+         mysqli_query($conn, "DELETE FROM `cart` WHERE id = '$remove_id'");
+         header('location:cart.php');
+      };
 
-if(isset($_GET['delete_all'])){
-   mysqli_query($conn, "DELETE FROM `cart`");
-   header('location:cart.php');
-}
-
+      if(isset($_GET['delete_all'])){
+         mysqli_query($conn, "DELETE FROM `cart`");
+         header('location:cart.php');
+      }
+   }
 ?>
 
 <!DOCTYPE html>
@@ -31,7 +33,7 @@ if(isset($_GET['delete_all'])){
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>shopping cart</title>
-
+   <link rel="shortcut icon" href="images/favicon.png" type="">
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 

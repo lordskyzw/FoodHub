@@ -1,6 +1,9 @@
 <?php
+session_start();
 
 @include 'dbcon.php';
+
+if (isset($_SESSION['uid'])){
 
 if(isset($_POST['add_to_cart'])){
 
@@ -19,8 +22,13 @@ if(isset($_POST['add_to_cart'])){
    }
 
 }
-
+}
+else{
+   die;
+}
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">

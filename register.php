@@ -21,7 +21,7 @@
 			z-index: -9999;
 			height: 100vh;
 		}
-		}	
+		
 		a{
 			text-decoration: none;
 		}
@@ -92,7 +92,7 @@
 
 			<input class="" type="email" name="email" value="" placeholder="Email" required>
 
-			<textarea class="" name="location" placeholder="hostel & room number" required></textarea>
+			<textarea class="" name="location" placeholder="Hostel & Room number e.g (X230)" required></textarea>
 			
 			<input class="" type="password" name="password" value="" placeholder="Password" required>
 

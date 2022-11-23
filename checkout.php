@@ -1,6 +1,15 @@
 <?php
 
-@include 'dbcon.php';
+
+session_start();
+	if (isset($_SESSION['uid'])) 
+	{
+		include('dbcon.php');
+		$uid = $_SESSION['uid'];
+		$query = "SELECT * FROM `user` WHERE `id` = '$uid'";
+		$run = mysqli_query($conn, $query);
+		$data = mysqli_fetch_assoc($run);
+   
 
 if(isset($_POST['order_btn'])){
 
@@ -44,12 +53,17 @@ if(isset($_POST['order_btn'])){
    }
 
 }
+}
+else{
+die;
+}
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   <link rel="shortcut icon" href="images/favicon.png" type="">
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -97,8 +111,8 @@ if(isset($_POST['order_btn'])){
 
       <div class="flex">
          <div class="inputBox">
-            <span>your burner</span>
-            <input type="text" placeholder="enter phone number" name="phone" required>
+            <span>your number</span>
+            <input type="text" placeholder="<?php echo $data['mobile'] ?>" name="phone" required>
          </div>
          <div class="inputBox">
             <span>payment method</span>
@@ -110,7 +124,7 @@ if(isset($_POST['order_btn'])){
          </div>
          <div class="inputBox">
             <span>Drop Location</span>
-            <input type="text" placeholder="meetup spot" name="location" required>
+            <input type="text" placeholder="<?php echo $data['location'] ?>" name="location" required>
          </div>
       </div>
       <input type="submit" value="order now" name="order_btn" class="btn">

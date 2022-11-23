@@ -21,6 +21,7 @@ session_start();
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title>FoodHub</title>
+	<link rel="shortcut icon" href="images/favicon.png" type="">
 	<!-- font awesome -->
   	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
   	<!-- Bootstrap -->
@@ -206,7 +207,7 @@ session_start();
 				{
 					?><a href="products.php" >MENU</a><?php
 				}else{
-					?><a href="products.php" >MENU</a><?php
+					?><a href="login.php" >LOGIN</a><?php
 				}
 				?>
 		</div>

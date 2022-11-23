@@ -5,6 +5,27 @@
 }
 
 
+.hub {
+
+    font-family: sans-serif;
+    font-weight: bold;
+  }
+  
+  .hub span:nth-child(2) {
+    background: #FF9900;
+    color: #000000;
+    border-radius: 8px;
+    padding: 0 1px 1px 1px;
+    display: inline-block;
+  }
+
+
+
+  .cart{
+   color: #FF9900;
+   background-color: #000000;
+  }
+
 </style>
 
 
@@ -13,8 +34,7 @@
 
    <div class="flex">
 
-      <a href="#" class="logo">FoodHub</a>
-      
+      <a href="index.php" class="logo"><div class="hub"><span>Food</span><span>Hub</span></div></a>
 
       <nav class="navbar">
         
@@ -28,9 +48,14 @@
 
       ?>
 
+      <a href="products.php" style="color: #fff;"><i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i></a>
 
-      <a href="products.php" style="color: #fff; top: 25%; text-align: bottom;"><i class="fa fa-arrow-left fa-3x" aria-hidden="true"></i></a>
+      <!--<div id="menu-btn" class="fas fa-bars"></div>-->
 
    </div>
 
 </header>
+
+
+
+
