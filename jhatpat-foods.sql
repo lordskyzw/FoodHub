@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `admin` (
-  `id` int(11) NOT NULL,
+  `id` int(11) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   `username` varchar(11) NOT NULL,
   `password` varchar(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -48,7 +48,7 @@ INSERT INTO `admin` (`id`, `username`, `password`) VALUES
 --
 
 CREATE TABLE `menu` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `item_no` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `type` varchar(50) NOT NULL,
@@ -73,7 +73,7 @@ INSERT INTO `menu` (`id`, `item_no`, `name`, `type`, `detail`, `price`, `image`)
 --
 
 CREATE TABLE `order` (
-  `Id` int(11) NOT NULL,
+  `Id` int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
   `orderId` int(11) NOT NULL,
   `userId` int(11) NOT NULL,
   `itemName` varchar(50) NOT NULL,
@@ -158,7 +158,7 @@ INSERT INTO `order` (`Id`, `orderId`, `userId`, `itemName`, `price`, `qty`, `tot
 --
 
 CREATE TABLE `user` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(200) NOT NULL,
   `mobile` varchar(200) NOT NULL,
   `location` varchar(200) NOT NULL,
@@ -187,7 +187,7 @@ INSERT INTO `user` (`id`, `name`, `mobile`, `location`, `email`, `password`, `cp
 --
 
 CREATE TABLE `cart`(
-    `id` INT(11) NOT NULL AUTO_INCREMENT,
+    `id` INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
     `user_id` INT(11) NOT NULL,
     `item_id` INT(11) NOT NULL,
     `total_item` INT(11) NOT NULL,
