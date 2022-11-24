@@ -14,8 +14,8 @@ session_start();
 if(isset($_POST['order_btn'])){
 
    
-
-   $number = $_POST['number'];
+   $name = $data['name'];
+   $number = $_POST['phone'];
    $method = $_POST['method'];
    $location = $_POST['location'];
   
@@ -31,7 +31,7 @@ if(isset($_POST['order_btn'])){
    };
 
    $total_product = implode(', ',$product_name);
-   $detail_query = mysqli_query($conn, "INSERT INTO `order`(phonenumber, method, location, qty, total) VALUES('$number','$method','$location','$total_product','$price_total')") or die('query failed');
+   $detail_query = mysqli_query($conn, "INSERT INTO `order`(phonenumber, name, method, location, qty, total) VALUES('$number', '$name', '$method','$location','$total_product','$price_total')") or die('query failed');
 
    if($cart_query && $detail_query){
       echo "

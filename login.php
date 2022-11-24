@@ -138,8 +138,10 @@
 		{
 			$data = mysqli_fetch_assoc($run);
 			$id = $data['id'];
+			$phonenumber = $data['mobile'];
 
 			$_SESSION['uid'] = $id;
+			$_SESSION['phonenumber'] = $phonenumber;
 
 			?>
 				<script>

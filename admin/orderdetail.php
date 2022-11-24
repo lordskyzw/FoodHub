@@ -32,7 +32,7 @@
 			<th width="180">Total</th>
 			<th width="150">Name</th>
 			<th width="400">location</th>
-			<th width="150">Email</th>
+			<th width="150">Number</th>
 		</tr>
 
 		<?php
@@ -59,7 +59,7 @@
 						<td> <?php echo $data['total']; ?> </td>
 						<td> <?php echo $data['name']; ?> </td>
 						<td> <?php echo $data['location']; ?> </td>
-						<td> <?php echo $data['email']; ?> </td>
+						<td> <?php echo $data['phonenumber']; ?> </td>
 					</tr>
 					<?php
 				}
