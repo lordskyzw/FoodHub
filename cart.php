@@ -11,6 +11,7 @@ session_start();
          if($update_quantity_query){
             header('location:cart.php');
          };
+         
       };
 
       if(isset($_GET['remove'])){

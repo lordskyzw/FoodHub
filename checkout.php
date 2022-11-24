@@ -13,11 +13,12 @@ session_start();
 
 if(isset($_POST['order_btn'])){
 
-   
+
    $name = $data['name'];
    $number = $_POST['phone'];
    $method = $_POST['method'];
    $location = $_POST['location'];
+   
   
 
    $cart_query = mysqli_query($conn, "SELECT * FROM `cart`");
@@ -30,8 +31,12 @@ if(isset($_POST['order_btn'])){
       };
    };
 
+   $product_item = mysqli_fetch_assoc($cart_query);
+   $foodname = $product_item['name'];
    $total_product = implode(', ',$product_name);
-   $detail_query = mysqli_query($conn, "INSERT INTO `order`(phonenumber, name, method, location, qty, total) VALUES('$number', '$name', '$method','$location','$total_product','$price_total')") or die('query failed');
+  
+
+   $detail_query = mysqli_query($conn, "INSERT INTO `order`(phonenumber, name, method, location, qty, total, itemName) VALUES('$number', '$name', '$method','$location','$total_product','$price_total', '$foodname')") or die('query failed');
 
    if($cart_query && $detail_query){
       echo "
