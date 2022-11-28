@@ -1,6 +1,9 @@
 <?php
 
 
+//need to create a new variable to hold the names of all the products bought.
+//this variable then gets posted into the database to show up to the admin side for delivery purposes
+
 session_start();
 	if (isset($_SESSION['uid'])) 
 	{
@@ -13,7 +16,7 @@ session_start();
 
 if(isset($_POST['order_btn'])){
 
-
+   
    $name = $data['name'];
    $number = $_POST['phone'];
    $method = $_POST['method'];
@@ -23,20 +26,25 @@ if(isset($_POST['order_btn'])){
 
    $cart_query = mysqli_query($conn, "SELECT * FROM `cart`");
    $price_total = 0;
+
    if(mysqli_num_rows($cart_query) > 0){
       while($product_item = mysqli_fetch_assoc($cart_query)){
          $product_name[] = $product_item['name'] .' ('. $product_item['quantity'] .') ';
+         $foodname = $product_item['name'];
          $product_price = number_format($product_item['price'] * $product_item['quantity']);
          $price_total += $product_price;
       };
    };
 
+   
    $total_product = implode(', ',$product_name);
-  
 
-   $detail_query = mysqli_query($conn, "INSERT INTO `order`(phonenumber, name, method, location, qty, total) VALUES('$number', '$name', '$method','$location','$total_product','$price_total')") or die('query failed');
+   $detail_query = mysqli_query($conn, "INSERT INTO `order`(itemName, phonenumber, name, method, location, qty, total) VALUES('$foodname','$number', '$name', '$method','$location','$total_product','$price_total')") or die('query failed');
 
    if($cart_query && $detail_query){
+
+      
+
       echo "
       <div class='order-message-container'>
       <div class='message-container'>

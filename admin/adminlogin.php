@@ -1,5 +1,9 @@
 <?php
 	
+//need to change the admin password and also disable it from being displayed by default. 
+// we are now focusing on moving onto prod enviroment
+
+
 	session_start();
 
 	if (isset($_SESSION['aid'])) 
@@ -12,8 +16,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Backend </title>
+	<title>Admin</title>
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<link rel="shortcut icon" href="../images/favicon.png" type="">
 </head>
 <body>
 
@@ -31,11 +36,11 @@
 			<form action="adminlogin.php" method="post">
 				<tr>
 					<td>Username</td>
-					<td><input type="text" name="uname" value="admin" required></td>
+					<td><input type="text" name="uname" value="" required></td>
 				</tr>
 				<tr>
 					<td>Password</td>
-					<td><input type="password" name="pass" value="admin" required></td>
+					<td><input type="password" name="pass" value="" required></td>
 				</tr>
 				<tr>
 					<td colspan="2" align="center" height="80">
