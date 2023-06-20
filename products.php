@@ -7,9 +7,11 @@ if (isset($_SESSION['uid'])){
 
 if(isset($_POST['add_to_cart'])){
 
+   $user_id = $_SESSION['uid'];
    $product_name = $_POST['product_name'];
    $product_price = $_POST['product_price'];
    $product_image = $_POST['product_image'];
+   $product_id = $_POST['product_id'];
    $product_quantity = 1;
 
    $select_cart = mysqli_query($conn, "SELECT * FROM `cart` WHERE name = '$product_name'");
@@ -17,7 +19,7 @@ if(isset($_POST['add_to_cart'])){
    if(mysqli_num_rows($select_cart) > 0){
       $message[] = 'product already added to cart';
    }else{
-      $insert_product = mysqli_query($conn, "INSERT INTO `cart`(name, price, image, quantity) VALUES('$product_name', '$product_price', '$product_image', '$product_quantity')");
+      $insert_product = mysqli_query($conn, "INSERT INTO `cart`(name, user_id, item_id, price, image, total_item) VALUES('$product_name', '$user_id', '$product_id', '$product_price', '$product_image', '$product_quantity')");
       $message[] = 'product added to cart succesfully';
    }
 
@@ -82,6 +84,8 @@ if(isset($message)){
             <input type="hidden" name="product_name" value="<?php echo $fetch_product['name']; ?>">
             <input type="hidden" name="product_price" value="<?php echo $fetch_product['price']; ?>">
             <input type="hidden" name="product_image" value="<?php echo $fetch_product['image']; ?>">
+            <input type="hidden" name="product_id" value="<?php echo $fetch_product['id']; ?>">
+      <!-- The hidden input field above stores the value of 'id' column from the 'menu' table -->
             <input type="submit" class="btn" value="add to cart" name="add_to_cart">
          </div>
       </form>

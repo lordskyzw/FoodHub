@@ -1,6 +1,6 @@
 <?php
 	
-	$conn = mysqli_connect('localhost','root','','jhatpat-foods');
+	$conn = mysqli_connect('localhost','root','','Foodhub');
 
 	if ($conn == false) 
 	{
